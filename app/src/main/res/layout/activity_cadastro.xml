@@ -52,15 +52,16 @@
 
     <TextView
         android:id="@+id/Cadastro"
-        android:layout_width="205dp"
-        android:layout_height="66dp"
+        android:layout_width="207dp"
+        android:layout_height="64dp"
         android:text="Cadastro"
         android:textSize="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.575"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintVertical_bias="0.062" />
 
     <Button
         android:id="@+id/btCadastrar"
@@ -74,5 +75,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.742" />
+
+    <ImageView
+        android:id="@+id/btVoltar"
+        android:layout_width="69dp"
+        android:layout_height="51dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.079"
+        app:srcCompat="@drawable/_11686_back_arrow_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
