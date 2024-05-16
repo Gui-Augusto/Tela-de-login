@@ -78,6 +78,15 @@
         android:textAllCaps="true"
         android:text="Calcular" />
 
+    <Button
+        android:id="@+id/btVoltarCalc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Voltar"
+        android:textAllCaps="true" />
+
     <TextView
         android:id="@+id/tvResult"
         android:layout_width="match_parent"

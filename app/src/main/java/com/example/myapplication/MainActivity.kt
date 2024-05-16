@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
                     if (etSenha.text.toString() == sysSenha && etUsuario.text.toString() == sysUser) {
                         Toast.makeText(this, "Seja bem vindo " + etUsuario.text.toString(), Toast.LENGTH_LONG).show()
-                        val newIntent = Intent(this, CalculadoraActivity::class.java)
+                        val newIntent = Intent(this, MenuActivity::class.java)
                         startActivity(newIntent)
                     } else {
                         Toast.makeText(this, "Usuario ou senha inválidos!", Toast.LENGTH_SHORT).show()

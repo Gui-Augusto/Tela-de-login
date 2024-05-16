@@ -20,25 +20,27 @@ class CadastroActivity : AppCompatActivity() {
         val btVoltar = findViewById<ImageView>(R.id.btVoltar)
         val btCadastrar = findViewById<Button>(R.id.btCadastrar)
 
-        btCadastrar.setOnClickListener{
-            val nome = nomeID.text.toString()
-            val userName = userNameID.text.toString()
-            val senha = senhaID.text.toString()
-            val confirmSenha = confirmSenhaID.text.toString()
+        btCadastrar.setOnClickListener {
+            var nome = nomeID.text.toString()
+            var userName = userNameID.text.toString()
+            var senha = senhaID.text.toString()
+            var confirmSenha = confirmSenhaID.text.toString()
 
-            if(nome != null && userName != null && senha != null && senha == confirmSenha){
-                val user = UserModel()
+            if (nome != null && userName != null && senha != null && senha == confirmSenha) {
+                var user = UserModel()
                 user.nome = nome
                 user.username = userName
                 user.senha = senha
                 BD.users.add(user)
-                Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Cadastro realizado com sucesso", Toast.LENGTH_SHORT).show()
                 val newIntent = Intent(this, MainActivity::class.java)
                 startActivity(newIntent)
+            } else {
+                Toast.makeText(this, "Preencha todos campos", Toast.LENGTH_SHORT).show()
             }
         }
 
-        btVoltar.setOnClickListener{
+        btVoltar.setOnClickListener {
             val newIntent = Intent(this, MainActivity::class.java)
             startActivity(newIntent)
         }

@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -21,6 +22,7 @@ class CalculadoraActivity : AppCompatActivity() {
         val btSubtrair = findViewById<Button>(R.id.btSubtrair)
         val btDividir = findViewById<Button>(R.id.btDividir)
         val btMultiplicar = findViewById<Button>(R.id.btMultiplicar)
+        val btVoltar = findViewById<Button>(R.id.btVoltarCalc)
 
         val tvResult = findViewById<TextView>(R.id.tvResult)
 
@@ -67,6 +69,11 @@ class CalculadoraActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "Selecione a operação para continuar", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        btVoltar.setOnClickListener{
+            val newIntent = Intent(this, MenuActivity::class.java)
+            startActivity(newIntent)
         }
     }
 }
